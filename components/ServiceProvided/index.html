@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html >
+<head><meta charset="utf-8">
+<title>In Home Rehab</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style id="vuetify-theme-stylesheet">:root {
+      --v-theme-background: 255,255,255;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 255,255,255;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-variant: 66,66,66;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 238,238,238;
+      --v-theme-primary: 137,195,3;
+      --v-theme-primary-overlay-multiplier: 1;
+      --v-theme-primary-darken-1: 55,0,179;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 18,89,93;
+      --v-theme-secondary-overlay-multiplier: 2;
+      --v-theme-secondary-darken-1: 1,135,134;
+      --v-theme-secondary-darken-1-overlay-multiplier: 1;
+      --v-theme-error: 176,0,32;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 1;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 1;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 1;
+      --v-theme-primary-background: 242,244,245;
+      --v-theme-primary-background-overlay-multiplier: 1;
+      --v-theme-on-background: 0,0,0;
+      --v-theme-on-surface: 0,0,0;
+      --v-theme-on-primary: 0,0,0;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 255,255,255;
+      --v-theme-on-secondary-darken-1: 255,255,255;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-theme-on-primary-background: 0,0,0;
+      --v-border-color: 0, 0, 0;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.04;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.12;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 33, 37, 41;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 245, 245, 245;
+      --v-theme-on-code: 0, 0, 0;
+    }
+    .v-theme--light {
+      color-scheme: normal;
+      --v-theme-background: 255,255,255;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 255,255,255;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-variant: 66,66,66;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 238,238,238;
+      --v-theme-primary: 98,0,238;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 55,0,179;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 3,218,198;
+      --v-theme-secondary-overlay-multiplier: 1;
+      --v-theme-secondary-darken-1: 1,135,134;
+      --v-theme-secondary-darken-1-overlay-multiplier: 1;
+      --v-theme-error: 176,0,32;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 1;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 1;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 1;
+      --v-theme-on-background: 0,0,0;
+      --v-theme-on-surface: 0,0,0;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 0,0,0;
+      --v-theme-on-secondary-darken-1: 255,255,255;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-border-color: 0, 0, 0;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.04;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.12;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 33, 37, 41;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 245, 245, 245;
+      --v-theme-on-code: 0, 0, 0;
+    }
+    .v-theme--dark {
+      color-scheme: dark;
+      --v-theme-background: 18,18,18;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 33,33,33;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-variant: 189,189,189;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 66,66,66;
+      --v-theme-primary: 187,134,252;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 55,0,179;
+      --v-theme-primary-darken-1-overlay-multiplier: 1;
+      --v-theme-secondary: 3,218,197;
+      --v-theme-secondary-overlay-multiplier: 2;
+      --v-theme-secondary-darken-1: 3,218,197;
+      --v-theme-secondary-darken-1-overlay-multiplier: 2;
+      --v-theme-error: 207,102,121;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 2;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 2;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 2;
+      --v-theme-on-background: 255,255,255;
+      --v-theme-on-surface: 255,255,255;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 0,0,0;
+      --v-theme-on-secondary-darken-1: 0,0,0;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-border-color: 255, 255, 255;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.1;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.16;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 33, 37, 41;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 52, 52, 52;
+      --v-theme-on-code: 204, 204, 204;
+    }
+    .v-theme--myTheme {
+      color-scheme: normal;
+      --v-theme-background: 255,255,255;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 255,255,255;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-variant: 66,66,66;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 238,238,238;
+      --v-theme-primary: 137,195,3;
+      --v-theme-primary-overlay-multiplier: 1;
+      --v-theme-primary-darken-1: 55,0,179;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 18,89,93;
+      --v-theme-secondary-overlay-multiplier: 2;
+      --v-theme-secondary-darken-1: 1,135,134;
+      --v-theme-secondary-darken-1-overlay-multiplier: 1;
+      --v-theme-error: 176,0,32;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 1;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 1;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 1;
+      --v-theme-primary-background: 242,244,245;
+      --v-theme-primary-background-overlay-multiplier: 1;
+      --v-theme-on-background: 0,0,0;
+      --v-theme-on-surface: 0,0,0;
+      --v-theme-on-primary: 0,0,0;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 255,255,255;
+      --v-theme-on-secondary-darken-1: 255,255,255;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-theme-on-primary-background: 0,0,0;
+      --v-border-color: 0, 0, 0;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.04;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.12;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 33, 37, 41;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 245, 245, 245;
+      --v-theme-on-code: 0, 0, 0;
+    }
+    .bg-background {
+      --v-theme-overlay-multiplier: var(--v-theme-background-overlay-multiplier);
+      background: rgb(var(--v-theme-background)) !important;
+      color: rgb(var(--v-theme-on-background)) !important;
+    }
+    .bg-surface {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-overlay-multiplier);
+      background: rgb(var(--v-theme-surface)) !important;
+      color: rgb(var(--v-theme-on-surface)) !important;
+    }
+    .bg-surface-variant {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-variant-overlay-multiplier);
+      background: rgb(var(--v-theme-surface-variant)) !important;
+      color: rgb(var(--v-theme-on-surface-variant)) !important;
+    }
+    .bg-primary {
+      --v-theme-overlay-multiplier: var(--v-theme-primary-overlay-multiplier);
+      background: rgb(var(--v-theme-primary)) !important;
+      color: rgb(var(--v-theme-on-primary)) !important;
+    }
+    .bg-primary-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-primary-darken-1-overlay-multiplier);
+      background: rgb(var(--v-theme-primary-darken-1)) !important;
+      color: rgb(var(--v-theme-on-primary-darken-1)) !important;
+    }
+    .bg-secondary {
+      --v-theme-overlay-multiplier: var(--v-theme-secondary-overlay-multiplier);
+      background: rgb(var(--v-theme-secondary)) !important;
+      color: rgb(var(--v-theme-on-secondary)) !important;
+    }
+    .bg-secondary-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-secondary-darken-1-overlay-multiplier);
+      background: rgb(var(--v-theme-secondary-darken-1)) !important;
+      color: rgb(var(--v-theme-on-secondary-darken-1)) !important;
+    }
+    .bg-error {
+      --v-theme-overlay-multiplier: var(--v-theme-error-overlay-multiplier);
+      background: rgb(var(--v-theme-error)) !important;
+      color: rgb(var(--v-theme-on-error)) !important;
+    }
+    .bg-info {
+      --v-theme-overlay-multiplier: var(--v-theme-info-overlay-multiplier);
+      background: rgb(var(--v-theme-info)) !important;
+      color: rgb(var(--v-theme-on-info)) !important;
+    }
+    .bg-success {
+      --v-theme-overlay-multiplier: var(--v-theme-success-overlay-multiplier);
+      background: rgb(var(--v-theme-success)) !important;
+      color: rgb(var(--v-theme-on-success)) !important;
+    }
+    .bg-warning {
+      --v-theme-overlay-multiplier: var(--v-theme-warning-overlay-multiplier);
+      background: rgb(var(--v-theme-warning)) !important;
+      color: rgb(var(--v-theme-on-warning)) !important;
+    }
+    .bg-primary-background {
+      --v-theme-overlay-multiplier: var(--v-theme-primary-background-overlay-multiplier);
+      background: rgb(var(--v-theme-primary-background)) !important;
+      color: rgb(var(--v-theme-on-primary-background)) !important;
+    }
+    .text-background {
+      color: rgb(var(--v-theme-background)) !important;
+    }
+    .border-background {
+      --v-border-color: var(--v-theme-background);
+    }
+    .text-surface {
+      color: rgb(var(--v-theme-surface)) !important;
+    }
+    .border-surface {
+      --v-border-color: var(--v-theme-surface);
+    }
+    .text-surface-variant {
+      color: rgb(var(--v-theme-surface-variant)) !important;
+    }
+    .border-surface-variant {
+      --v-border-color: var(--v-theme-surface-variant);
+    }
+    .on-surface-variant {
+      color: rgb(var(--v-theme-on-surface-variant)) !important;
+    }
+    .text-primary {
+      color: rgb(var(--v-theme-primary)) !important;
+    }
+    .border-primary {
+      --v-border-color: var(--v-theme-primary);
+    }
+    .text-primary-darken-1 {
+      color: rgb(var(--v-theme-primary-darken-1)) !important;
+    }
+    .border-primary-darken-1 {
+      --v-border-color: var(--v-theme-primary-darken-1);
+    }
+    .text-secondary {
+      color: rgb(var(--v-theme-secondary)) !important;
+    }
+    .border-secondary {
+      --v-border-color: var(--v-theme-secondary);
+    }
+    .text-secondary-darken-1 {
+      color: rgb(var(--v-theme-secondary-darken-1)) !important;
+    }
+    .border-secondary-darken-1 {
+      --v-border-color: var(--v-theme-secondary-darken-1);
+    }
+    .text-error {
+      color: rgb(var(--v-theme-error)) !important;
+    }
+    .border-error {
+      --v-border-color: var(--v-theme-error);
+    }
+    .text-info {
+      color: rgb(var(--v-theme-info)) !important;
+    }
+    .border-info {
+      --v-border-color: var(--v-theme-info);
+    }
+    .text-success {
+      color: rgb(var(--v-theme-success)) !important;
+    }
+    .border-success {
+      --v-border-color: var(--v-theme-success);
+    }
+    .text-warning {
+      color: rgb(var(--v-theme-warning)) !important;
+    }
+    .border-warning {
+      --v-border-color: var(--v-theme-warning);
+    }
+    .on-background {
+      color: rgb(var(--v-theme-on-background)) !important;
+    }
+    .on-surface {
+      color: rgb(var(--v-theme-on-surface)) !important;
+    }
+    .on-primary {
+      color: rgb(var(--v-theme-on-primary)) !important;
+    }
+    .on-primary-darken-1 {
+      color: rgb(var(--v-theme-on-primary-darken-1)) !important;
+    }
+    .on-secondary {
+      color: rgb(var(--v-theme-on-secondary)) !important;
+    }
+    .on-secondary-darken-1 {
+      color: rgb(var(--v-theme-on-secondary-darken-1)) !important;
+    }
+    .on-error {
+      color: rgb(var(--v-theme-on-error)) !important;
+    }
+    .on-info {
+      color: rgb(var(--v-theme-on-info)) !important;
+    }
+    .on-success {
+      color: rgb(var(--v-theme-on-success)) !important;
+    }
+    .on-warning {
+      color: rgb(var(--v-theme-on-warning)) !important;
+    }
+    .text-primary-background {
+      color: rgb(var(--v-theme-primary-background)) !important;
+    }
+    .border-primary-background {
+      --v-border-color: var(--v-theme-primary-background);
+    }
+    .on-primary-background {
+      color: rgb(var(--v-theme-on-primary-background)) !important;
+    }
+</style><link rel="modulepreload" href="/in-home-rehab/components/ServiceProvided/_payload.js"><link rel="modulepreload" as="script" crossorigin href="/in-home-rehab/_nuxt/entry.9eba175a.js"><link rel="preload" as="style" href="/in-home-rehab/_nuxt/entry.f0d45263.css"><link rel="modulepreload" as="script" crossorigin href="/in-home-rehab/_nuxt/ServiceProvided.877854ac.js"><link rel="modulepreload" as="script" crossorigin href="/in-home-rehab/_nuxt/Icon.5a89dbdd.js"><link rel="modulepreload" as="script" crossorigin href="/in-home-rehab/_nuxt/config.1484998d.js"><link rel="modulepreload" as="script" crossorigin href="/in-home-rehab/_nuxt/ServiceCard.6d1c1ba8.js"><link rel="prefetch" as="script" crossorigin href="/in-home-rehab/_nuxt/FooterComponent.355ec40e.js"><link rel="prefetch" as="script" crossorigin href="/in-home-rehab/_nuxt/logo.f4a21025.js"><link rel="prefetch" as="script" crossorigin href="/in-home-rehab/_nuxt/HeaderComponent.049687e4.js"><link rel="prefetch" as="script" crossorigin href="/in-home-rehab/_nuxt/CarriersForm.e155253e.js"><link rel="prefetch" as="script" crossorigin href="/in-home-rehab/_nuxt/Thankyou.4bfee80b.js"><link rel="prefetch" as="script" crossorigin href="/in-home-rehab/_nuxt/error-component.c6486b50.js"><link rel="stylesheet" href="/in-home-rehab/_nuxt/entry.f0d45263.css"><style>.icon[data-v-cf1ec82f]{display:inline-block;vertical-align:middle}</style><style>.service-btn{color:var(--primary-text-color)}.service-title{color:var(--secondary-text-color)}.service-text{min-height:270px;text-align:justify}</style></head>
+<body ><div id="__nuxt"><!--[--><!--[--><!--[--><div class="my-10" id="service-we-provide"><h2 class="heading-text">Services we provide</h2><!--[--><div><div class="mt-8"><h2 class="service-sub text-primary"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="icon" style="" width="1em" height="1em" viewBox="0 0 24 24" data-v-cf1ec82f><path fill="currentColor" d="m21.71 11.29l-5-5A1 1 0 0 0 16 6H5a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h11a1 1 0 0 0 .71-.29l5-5a1 1 0 0 0 0-1.42M15.59 16H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h10.59l4 4Z"/></svg> Speech Therapy</h2><p class="mt-3 paragraph-text">Speech therapy is a type of therapy that helps people improve their communication skills, including speech, language, and swallowing abilities. It can benefit individuals with a wide range of conditions, such as developmental delays, stuttering, voice disorders, and brain injuries. The therapy typically involves exercises, strategies, and techniques to improve communication and promote functional independence. Speech therapists work with individuals of all ages, from children to the elderly, and tailor the therapy to meet the unique needs and goals of each person. The ultimate goal of speech therapy is to improve an individual&#39;s ability to communicate effectively and confidently in daily life.</p><div class="mt-3"><div class="v-row"><!--[--><div class="v-col-md-6 v-col-lg-3 v-col-12"><div class="v-card v-theme--myTheme v-card--density-default v-card--variant-elevated" style=""><!----><div class="v-card__loader"><div class="v-progress-linear v-theme--myTheme" style="top:0;height:0;--v-progress-linear-height:2px;left:50%;transform:translateX(-50%);" role="progressbar" aria-hidden="true" aria-valuemin="0" aria-valuemax="100"><!----><div class="v-progress-linear__background" style="width:100%;"></div><div class="v-progress-linear__indeterminate"><!--[--><div class="v-progress-linear__indeterminate long" style=""></div><div class="v-progress-linear__indeterminate short" style=""></div><!--]--></div><!----></div></div><!----><!----><!--[--><div class="v-responsive v-img v-img--booting" style="height:200px;"><div class="v-responsive__sizer" style=""></div><!--[--><!--[--><!----><!----><!----><!----><!----><!--]--><!--]--><!----></div><div class="v-card-title service-title">Autism Spectrum Disorder (ASD)</div><div><hr class="v-divider v-theme--myTheme" style="" aria-orientation="horizontal" role="separator"><div class="v-card-text service-text">Autism Spectrum Disorder (ASD), is a neurodevelopmental disorder caused by differences in the brain. Children with ASD often have problems with social communication and interaction, and restricted or repetitive behaviors or interests. Speech therapy for ASD  addresses language and communication challenges. It helps to improve their verbal, nonverbal and social communication.</div></div><!--]--><!----><!--[--><!----><span class="v-card__underlay"></span><!--]--></div></div><div class="v-col-md-6 v-col-lg-3 v-col-12"><div class="v-card v-theme--myTheme v-card--density-default v-card--variant-elevated" style=""><!----><div class="v-card__loader"><div class="v-progress-linear v-theme--myTheme" style="top:0;height:0;--v-progress-linear-height:2px;left:50%;transform:translateX(-50%);" role="progressbar" aria-hidden="true" aria-valuemin="0" aria-valuemax="100"><!----><div class="v-progress-linear__background" style="width:100%;"></div><div class="v-progress-linear__indeterminate"><!--[--><div class="v-progress-linear__indeterminate long" style=""></div><div class="v-progress-linear__indeterminate short" style=""></div><!--]--></div><!----></div></div><!----><!----><!--[--><div class="v-responsive v-img v-img--booting" style="height:200px;"><div class="v-responsive__sizer" style=""></div><!--[--><!--[--><!----><!----><!----><!----><!----><!--]--><!--]--><!----></div><div class="v-card-title service-title">Language Disorder</div><div><hr class="v-divider v-theme--myTheme" style="" aria-orientation="horizontal" role="separator"><div class="v-card-text service-text">Language Disorder is an impairment in the processing of linguistic information that affects an individual&#39;s ability to receive and/or express language.The disorder involves persistent difficulties in the comprehension or production of spoken, written, sign language, or other forms of language.Speech therapy will often start by identifying your child’s areas of strength and weakness. They will develop a tailored treatment plan to help your child master their language skills and communicate more effectively.</div></div><!--]--><!----><!--[--><!----><span class="v-card__underlay"></span><!--]--></div></div><div class="v-col-md-6 v-col-lg-3 v-col-12"><div class="v-card v-theme--myTheme v-card--density-default v-card--variant-elevated" style=""><!----><div class="v-card__loader"><div class="v-progress-linear v-theme--myTheme" style="top:0;height:0;--v-progress-linear-height:2px;left:50%;transform:translateX(-50%);" role="progressbar" aria-hidden="true" aria-valuemin="0" aria-valuemax="100"><!----><div class="v-progress-linear__background" style="width:100%;"></div><div class="v-progress-linear__indeterminate"><!--[--><div class="v-progress-linear__indeterminate long" style=""></div><div class="v-progress-linear__indeterminate short" style=""></div><!--]--></div><!----></div></div><!----><!----><!--[--><div class="v-responsive v-img v-img--booting" style="height:200px;"><div class="v-responsive__sizer" style=""></div><!--[--><!--[--><!----><!----><!----><!----><!----><!--]--><!--]--><!----></div><div class="v-card-title service-title">Dysarthria</div><div><hr class="v-divider v-theme--myTheme" style="" aria-orientation="horizontal" role="separator"><div class="v-card-text service-text">Dysarthria is a motor speech disorder that results from loss of strength, slowness, or coordination of the muscles that control speech. This results in difficulty understanding the speech and can range from mild slurring to completely unintelligible speech. Speech therapy goals include adjusting speech rate, strengthening muscles, improving breath support, improving articulation, and helping family members communicate with you.</div></div><!--]--><!----><!--[--><!----><span class="v-card__underlay"></span><!--]--></div></div><div class="v-col-md-6 v-col-lg-3 v-col-12"><div class="v-card v-theme--myTheme v-card--density-default v-card--variant-elevated" style=""><!----><div class="v-card__loader"><div class="v-progress-linear v-theme--myTheme" style="top:0;height:0;--v-progress-linear-height:2px;left:50%;transform:translateX(-50%);" role="progressbar" aria-hidden="true" aria-valuemin="0" aria-valuemax="100"><!----><div class="v-progress-linear__background" style="width:100%;"></div><div class="v-progress-linear__indeterminate"><!--[--><div class="v-progress-linear__indeterminate long" style=""></div><div class="v-progress-linear__indeterminate short" style=""></div><!--]--></div><!----></div></div><!----><!----><!--[--><div class="v-responsive v-img v-img--booting" style="height:200px;"><div class="v-responsive__sizer" style=""></div><!--[--><!--[--><!----><!----><!----><!----><!----><!--]--><!--]--><!----></div><div class="v-card-title service-title">Aphasia</div><div><hr class="v-divider v-theme--myTheme" style="" aria-orientation="horizontal" role="separator"><div class="v-card-text service-text">Aphasia is a disorder that results from damage to areas of the brain that are responsible for language.Occurs suddenly following a stroke or head injury or slowly,as a result of tumor or progressive neurological conditions.Speech therapists help with language therapy, teach non-verbal communication skills, and help family members adapt to new forms of communication.</div></div><!--]--><!----><!--[--><!----><span class="v-card__underlay"></span><!--]--></div></div><!--]--></div></div></div></div><div><div class="mt-8"><h2 class="service-sub text-primary"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="icon" style="" width="1em" height="1em" viewBox="0 0 24 24" data-v-cf1ec82f><path fill="currentColor" d="m21.71 11.29l-5-5A1 1 0 0 0 16 6H5a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h11a1 1 0 0 0 .71-.29l5-5a1 1 0 0 0 0-1.42M15.59 16H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h10.59l4 4Z"/></svg> Occupational Therapy</h2><p class="mt-3 paragraph-text">Occupational therapy works with people of all age groups and abilities to help them do everyday tasks that they find meaningful. These can include looking after yourself (self-care): brushing, eating, bathing, dressing, etc., work or school-related skills, engaging in social activities, hobbies or interests, and being part of your community. Occupational therapy services typically include an evaluation that tells us what values and activities are important to you, an intervention plan that is unique to you to improve your ability to perform daily activities and reach your goals, and an outcome evaluation to make sure that the goals you set with your occupational therapist are being met. The primary goal of occupational therapy is to enable people to participate in the activities of everyday life as independently as possible</p><div class="mt-3"><div class="v-row"><!--[--><div class="v-col-md-6 v-col-lg-3 v-col-12"><div class="v-card v-theme--myTheme v-card--density-default v-card--variant-elevated" style=""><!----><div class="v-card__loader"><div class="v-progress-linear v-theme--myTheme" style="top:0;height:0;--v-progress-linear-height:2px;left:50%;transform:translateX(-50%);" role="progressbar" aria-hidden="true" aria-valuemin="0" aria-valuemax="100"><!----><div class="v-progress-linear__background" style="width:100%;"></div><div class="v-progress-linear__indeterminate"><!--[--><div class="v-progress-linear__indeterminate long" style=""></div><div class="v-progress-linear__indeterminate short" style=""></div><!--]--></div><!----></div></div><!----><!----><!--[--><div class="v-responsive v-img v-img--booting" style="height:200px;"><div class="v-responsive__sizer" style=""></div><!--[--><!--[--><!----><!----><!----><!----><!----><!--]--><!--]--><!----></div><div class="v-card-title service-title">Autism</div><div><hr class="v-divider v-theme--myTheme" style="" aria-orientation="horizontal" role="separator"><div class="v-card-text service-text">Autism, or autism spectrum disorder (ASD), refers to a broad range of conditions characterized by challenges with social skills, repetitive behaviors, speech and nonverbal communication. For children with autism, Occupational Therapists often focus on fine motor skills, play skills, learning strategies, social skills and self-care. Occupational Therapy strategies can also help to manage sensory issues.</div></div><!--]--><!----><!--[--><!----><span class="v-card__underlay"></span><!--]--></div></div><div class="v-col-md-6 v-col-lg-3 v-col-12"><div class="v-card v-theme--myTheme v-card--density-default v-card--variant-elevated" style=""><!----><div class="v-card__loader"><div class="v-progress-linear v-theme--myTheme" style="top:0;height:0;--v-progress-linear-height:2px;left:50%;transform:translateX(-50%);" role="progressbar" aria-hidden="true" aria-valuemin="0" aria-valuemax="100"><!----><div class="v-progress-linear__background" style="width:100%;"></div><div class="v-progress-linear__indeterminate"><!--[--><div class="v-progress-linear__indeterminate long" style=""></div><div class="v-progress-linear__indeterminate short" style=""></div><!--]--></div><!----></div></div><!----><!----><!--[--><div class="v-responsive v-img v-img--booting" style="height:200px;"><div class="v-responsive__sizer" style=""></div><!--[--><!--[--><!----><!----><!----><!----><!----><!--]--><!--]--><!----></div><div class="v-card-title service-title">Stroke</div><div><hr class="v-divider v-theme--myTheme" style="" aria-orientation="horizontal" role="separator"><div class="v-card-text service-text">Stroke is a medical condition in which there is damage to the brain caused by an interruption in the blood supply to the brain.After stroke, Occupational Therapy can help you return to work, be independent in your own home, and do leisure activities and hobbies. Occupational Therapy can also help in learning strategies to manage the cognitive, perceptual, and behavioral changes associated with Stroke. In addition, an Occupational Therapist can fabricate splints, advise on  equipments and home modifications to make you as safe and independent as possible</div></div><!--]--><!----><!--[--><!----><span class="v-card__underlay"></span><!--]--></div></div><div class="v-col-md-6 v-col-lg-3 v-col-12"><div class="v-card v-theme--myTheme v-card--density-default v-card--variant-elevated" style=""><!----><div class="v-card__loader"><div class="v-progress-linear v-theme--myTheme" style="top:0;height:0;--v-progress-linear-height:2px;left:50%;transform:translateX(-50%);" role="progressbar" aria-hidden="true" aria-valuemin="0" aria-valuemax="100"><!----><div class="v-progress-linear__background" style="width:100%;"></div><div class="v-progress-linear__indeterminate"><!--[--><div class="v-progress-linear__indeterminate long" style=""></div><div class="v-progress-linear__indeterminate short" style=""></div><!--]--></div><!----></div></div><!----><!----><!--[--><div class="v-responsive v-img v-img--booting" style="height:200px;"><div class="v-responsive__sizer" style=""></div><!--[--><!--[--><!----><!----><!----><!----><!----><!--]--><!--]--><!----></div><div class="v-card-title service-title">Hand injuries</div><div><hr class="v-divider v-theme--myTheme" style="" aria-orientation="horizontal" role="separator"><div class="v-card-text service-text">Hand injuries involve injuries to the bone or soft tissue occurring below the wrist joint with exception of tendon injuries outside of this zone. Types of hand injuries depend on tissues involved in the injury as skin, tendon, nerve, vessel, bone or combination of these injuries. Occupational therapy can help in recovery after surgery including scar management, reducing pain, regaining movements, hand function strengthening and custom splinting to facilitate healing and also prevent stiffness</div></div><!--]--><!----><!--[--><!----><span class="v-card__underlay"></span><!--]--></div></div><div class="v-col-md-6 v-col-lg-3 v-col-12"><div class="v-card v-theme--myTheme v-card--density-default v-card--variant-elevated" style=""><!----><div class="v-card__loader"><div class="v-progress-linear v-theme--myTheme" style="top:0;height:0;--v-progress-linear-height:2px;left:50%;transform:translateX(-50%);" role="progressbar" aria-hidden="true" aria-valuemin="0" aria-valuemax="100"><!----><div class="v-progress-linear__background" style="width:100%;"></div><div class="v-progress-linear__indeterminate"><!--[--><div class="v-progress-linear__indeterminate long" style=""></div><div class="v-progress-linear__indeterminate short" style=""></div><!--]--></div><!----></div></div><!----><!----><!--[--><div class="v-responsive v-img v-img--booting" style="height:200px;"><div class="v-responsive__sizer" style=""></div><!--[--><!--[--><!----><!----><!----><!----><!----><!--]--><!--]--><!----></div><div class="v-card-title service-title">Traumatic brain injury</div><div><hr class="v-divider v-theme--myTheme" style="" aria-orientation="horizontal" role="separator"><div class="v-card-text service-text">Traumatic brain injury (TBI) happens when a sudden, external, physical assault damages the brain. It often occurs as a result of a severe sports injury or car accident. A TBI can affect a variety of physical, cognitive, and psychological functions such as memory, emotional regulation, movement, and sensory processing. An occupational therapist will create a personalized rehabilitation regimen to help regain or compensate for these skills. The primary goal of occupational therapy for brain injury rehabilitation is to help individuals regain functional independent living skills.</div></div><!--]--><!----><!--[--><!----><span class="v-card__underlay"></span><!--]--></div></div><!--]--></div></div></div></div><!--]--></div><!--]--><!--]--><!--]--></div><script type="module">import p from "/in-home-rehab/components/ServiceProvided/_payload.js";window.__NUXT__={...p,...((function(a,b,c){return {state:{$sicons:{"uil:label":{left:a,top:a,width:b,height:b,rotate:a,vFlip:c,hFlip:c,body:"\u003Cpath fill=\"currentColor\" d=\"m21.71 11.29l-5-5A1 1 0 0 0 16 6H5a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h11a1 1 0 0 0 .71-.29l5-5a1 1 0 0 0 0-1.42M15.59 16H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h10.59l4 4Z\"\u002F\u003E"}}},_errors:{},serverRendered:true,prerenderedAt:1783093741301,config:{public:{},app:{baseURL:"\u002Fin-home-rehab\u002F",buildAssetsDir:"\u002F_nuxt\u002F",cdnURL:""}}}}(0,24,false)))}</script><script type="module" src="/in-home-rehab/_nuxt/entry.9eba175a.js" crossorigin></script></body>
+</html>
