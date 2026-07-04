@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iris Child Development Centre — Speech, Occupational &amp; Psychological Therapy | Kozhikode</title>
+<meta name="description" content="Iris Child Development Centre, Chevarambalam, Kozhikode — speech-language therapy, occupational therapy and psychological services for children and adults.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&amp;family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --yellow:#F2C230;
+  --green:#2E9E6B;
+  --teal:#1E8E77;
+  --blue:#2273B8;
+  --coral:#E8563F;
+  --pink:#F49BB4;
+  --cream:#FFF9F0;
+  --cream-2:#FDF3E3;
+  --ink:#2B2B33;
+  --ink-soft:#5A5A66;
+  --radius:22px;
+  --shadow:0 10px 30px rgba(43,43,51,.08);
+  --serif:"Fraunces",Georgia,serif;
+  --sans:"Nunito",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.65;overflow-x:hidden}
+img{max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:84px 0}
+.eyebrow{display:inline-block;font-weight:800;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--coral);background:#FDE8E2;padding:6px 16px;border-radius:999px;margin-bottom:16px}
+.sec-title{font-size:clamp(1.9rem,4vw,2.7rem);font-weight:900;line-height:1.15;margin-bottom:14px}
+.sec-sub{color:var(--ink-soft);max-width:640px;margin:0 auto 48px}
+.center{text-align:center}
+.btn{display:inline-block;font-weight:800;font-family:var(--sans);border-radius:999px;padding:14px 30px;transition:.25s;border:none;cursor:pointer;font-size:1rem}
+.btn-coral{background:var(--coral);color:#fff;box-shadow:0 8px 20px rgba(232,86,63,.35)}
+.btn-coral:hover{background:#d3462f;transform:translateY(-2px)}
+.btn-ghost{border:2px solid var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:100;background:rgba(255,249,240,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(43,43,51,.07)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo .word{font-family:var(--serif);font-weight:900;font-size:2rem;letter-spacing:.04em}
+.logo .word .l1{color:var(--yellow)}
+.logo .word .l2{color:var(--green)}
+.logo .word .l3{color:var(--blue)}
+.logo .word .l4{color:var(--coral)}
+.logo .tag{font-size:.55rem;font-weight:800;letter-spacing:.22em;color:var(--coral);text-transform:uppercase;margin-top:3px}
+nav ul{display:flex;gap:30px;list-style:none;align-items:center}
+nav a{font-weight:700;font-size:.95rem;color:var(--ink-soft);position:relative}
+nav a:hover{color:var(--coral)}
+nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:3px;border-radius:3px;background:var(--coral);transition:.25s}
+nav a:hover::after{width:100%}
+.nav-cta{background:var(--green);color:#fff!important;padding:10px 22px;border-radius:999px}
+.nav-cta:hover{background:var(--teal)}
+.nav-cta::after{display:none}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.burger span{display:block;width:26px;height:3px;background:var(--ink);margin:5px 0;border-radius:3px;transition:.3s}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:90px 0 110px;overflow:hidden;background:
+ radial-gradient(circle at 12% 20%, rgba(242,194,48,.18), transparent 30%),
+ radial-gradient(circle at 88% 15%, rgba(232,86,63,.14), transparent 32%),
+ radial-gradient(circle at 80% 85%, rgba(34,115,184,.12), transparent 35%),
+ radial-gradient(circle at 15% 90%, rgba(46,158,107,.14), transparent 30%),
+ var(--cream)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,5.4vw,3.9rem);font-weight:900;line-height:1.1;margin:18px 0 20px}
+.hero h1 .hl{color:var(--coral);font-style:italic}
+.hero p.lead{font-size:1.15rem;color:var(--ink-soft);max-width:520px;margin-bottom:34px}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.hero-art{position:relative;display:flex;justify-content:center}
+.hero-art svg{width:100%;max-width:430px;height:auto}
+.float{animation:float 5s ease-in-out infinite}
+.float.d1{animation-delay:1.2s}.float.d2{animation-delay:2.4s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.hero-badges{display:flex;gap:28px;margin-top:44px;flex-wrap:wrap}
+.badge{display:flex;align-items:center;gap:10px;font-weight:800;font-size:.9rem;color:var(--ink-soft)}
+.badge .dot{width:12px;height:12px;border-radius:50%}
+
+/* ---------- marquee strip ---------- */
+.strip{background:var(--green);color:#fff;padding:14px 0;overflow:hidden}
+.strip-inner{display:flex;gap:48px;white-space:nowrap;font-weight:800;font-size:.95rem;animation:scroll 28s linear infinite;width:max-content}
+.strip-inner span{display:flex;align-items:center;gap:12px}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- about ---------- */
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.about-art{position:relative}
+.about-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:36px;position:relative;z-index:2}
+.about-card h3{font-size:1.25rem;margin-bottom:10px;color:var(--teal)}
+.about-blob{position:absolute;inset:-24px -24px auto auto;width:140px;height:140px;border-radius:50%;background:var(--yellow);opacity:.25;z-index:1}
+.about-blob.b2{inset:auto auto -30px -30px;background:var(--blue);width:110px;height:110px;opacity:.18}
+.about p{color:var(--ink-soft);margin-bottom:16px}
+.check-list{list-style:none;margin:22px 0 30px}
+.check-list li{padding-left:36px;position:relative;margin-bottom:12px;font-weight:700}
+.check-list li::before{content:"✓";position:absolute;left:0;top:-1px;width:24px;height:24px;border-radius:50%;background:var(--green);color:#fff;font-size:.8rem;display:flex;align-items:center;justify-content:center;font-weight:900}
+
+/* ---------- services ---------- */
+.services{background:var(--cream-2)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.svc{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:34px 30px;display:flex;flex-direction:column;transition:.3s;border-top:6px solid transparent}
+.svc:hover{transform:translateY(-8px)}
+.svc.c-green{border-top-color:var(--green)}
+.svc.c-blue{border-top-color:var(--blue)}
+.svc.c-coral{border-top-color:var(--coral)}
+.svc-icon{width:64px;height:64px;border-radius:18px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.svc.c-green .svc-icon{background:#E3F4EC}
+.svc.c-blue .svc-icon{background:#E4EFF9}
+.svc.c-coral .svc-icon{background:#FDE8E2}
+.svc h3{font-size:1.35rem;margin-bottom:12px}
+.svc p{color:var(--ink-soft);font-size:.95rem;flex:1}
+.svc-more{margin-top:18px;font-weight:800;font-size:.9rem;color:var(--coral)}
+
+/* ---------- conditions accordions ---------- */
+.conditions .acc-group{max-width:840px;margin:0 auto 46px}
+.acc-group h3.group-title{font-size:1.5rem;margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.group-title .pill{width:14px;height:34px;border-radius:8px;display:inline-block}
+.acc{background:#fff;border-radius:16px;box-shadow:var(--shadow);margin-bottom:12px;overflow:hidden}
+.acc-head{width:100%;background:none;border:none;display:flex;justify-content:space-between;align-items:center;padding:20px 24px;cursor:pointer;font-family:var(--sans);font-weight:800;font-size:1.05rem;color:var(--ink);text-align:left}
+.acc-head .plus{width:30px;height:30px;min-width:30px;border-radius:50%;background:var(--cream-2);display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--coral);transition:.3s;font-size:1.1rem}
+.acc.open .plus{transform:rotate(45deg);background:var(--coral);color:#fff}
+.acc-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.acc-body p{padding:0 24px 22px;color:var(--ink-soft);font-size:.95rem}
+
+/* ---------- why ---------- */
+.why{background:var(--blue);color:#fff;position:relative;overflow:hidden}
+.why::before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:rgba(255,255,255,.06);top:-120px;right:-90px}
+.why::after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,.05);bottom:-90px;left:-60px}
+.why .eyebrow{background:rgba(255,255,255,.15);color:var(--yellow)}
+.why .sec-sub{color:rgba(255,255,255,.85)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative;z-index:2}
+.why-card{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius);padding:30px 24px;transition:.3s}
+.why-card:hover{background:rgba(255,255,255,.16);transform:translateY(-6px)}
+.why-card .num{font-family:var(--serif);font-weight:900;font-size:2rem;color:var(--yellow);display:block;margin-bottom:10px}
+.why-card h3{font-size:1.1rem;margin-bottom:8px}
+.why-card p{font-size:.9rem;color:rgba(255,255,255,.82)}
+
+/* ---------- contact ---------- */
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.c-info h2{margin-bottom:16px}
+.c-info p{color:var(--ink-soft);margin-bottom:28px}
+.c-item{display:flex;gap:16px;align-items:flex-start;margin-bottom:22px}
+.c-item .ic{width:48px;height:48px;min-width:48px;border-radius:14px;display:flex;align-items:center;justify-content:center}
+.c-item h4{font-size:1rem;margin-bottom:2px}
+.c-item a,.c-item span.val{color:var(--ink-soft);font-size:.95rem}
+.c-item a:hover{color:var(--coral)}
+.form-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:38px}
+.form-card h3{font-size:1.4rem;margin-bottom:6px}
+.form-card>p{color:var(--ink-soft);font-size:.9rem;margin-bottom:24px}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:800;font-size:.85rem;margin-bottom:6px}
+.field input,.field textarea{width:100%;border:2px solid #EDE4D4;border-radius:12px;padding:13px 16px;font-family:var(--sans);font-size:1rem;background:var(--cream);transition:.2s;color:var(--ink)}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--green);background:#fff}
+.form-card .btn{width:100%}
+.form-note{font-size:.8rem;color:var(--ink-soft);margin-top:12px;text-align:center}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:#CFCFD8;padding:56px 0 28px}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:44px;margin-bottom:40px}
+footer .logo .tag{color:var(--pink)}
+footer p{font-size:.9rem;margin-top:14px;max-width:320px}
+footer h4{color:#fff;font-family:var(--sans);font-size:.95rem;margin-bottom:16px;letter-spacing:.08em;text-transform:uppercase}
+footer ul{list-style:none}
+footer li{margin-bottom:10px;font-size:.92rem}
+footer a:hover{color:var(--yellow)}
+.f-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;text-align:center;font-size:.85rem;color:#8B8B96}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.show{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media(max-width:920px){
+  .hero .wrap,.about .wrap,.contact .wrap{grid-template-columns:1fr}
+  .hero-art{order:-1}
+  .hero-art svg{max-width:300px}
+  .svc-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .f-grid{grid-template-columns:1fr 1fr}
+  nav ul{position:fixed;inset:76px 0 auto 0;background:var(--cream);flex-direction:column;padding:28px;gap:20px;box-shadow:0 20px 30px rgba(0,0,0,.08);transform:translateY(-140%);transition:.35s;z-index:99}
+  nav ul.open{transform:none}
+  .burger{display:block}
+}
+@media(max-width:560px){
+  section{padding:60px 0}
+  .why-grid,.f-grid{grid-template-columns:1fr}
+  .hero{padding:56px 0 70px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#home" class="logo" aria-label="Iris Child Development Centre">
+      <span class="word"><span class="l1">I</span><span class="l2">R</span><span class="l3">I</span><span class="l4">S</span></span>
+      <span class="tag">Child Development Centre</span>
+    </a>
+    <nav>
+      <ul id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#conditions">What We Treat</a></li>
+        <li><a href="#why">Why Iris</a></li>
+        <li><a href="#contact" class="nav-cta">Book a Visit</a></li>
+      </ul>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Chevarambalam · Kozhikode</span>
+      <h1>Helping every child <span class="hl">bloom</span>, one milestone at a time.</h1>
+      <p class="lead">Iris Child Development Centre offers speech-language therapy, occupational therapy and psychological services for children and adults — delivered with warmth, play and evidence-based care.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-coral">Book an Appointment</a>
+        <a href="#services" class="btn btn-ghost">Explore Services</a>
+      </div>
+      <div class="hero-badges">
+        <div class="badge"><span class="dot" style="background:var(--green)"></span>Qualified therapists</div>
+        <div class="badge"><span class="dot" style="background:var(--yellow)"></span>Child-friendly clinic</div>
+        <div class="badge"><span class="dot" style="background:var(--coral)"></span>Individualized plans</div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="210" cy="210" r="190" fill="#FDF3E3"/>
+        <circle cx="210" cy="210" r="190" fill="none" stroke="#F2C230" stroke-width="3" stroke-dasharray="4 14" stroke-linecap="round"/>
+        <!-- flower -->
+        <g class="float">
+          <g transform="translate(150,250)">
+            <path d="M0 60 Q-4 20 0 0" stroke="#2E9E6B" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M0 40 Q-22 34 -28 16" stroke="#2E9E6B" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <ellipse cx="-30" cy="12" rx="10" ry="6" fill="#2E9E6B" transform="rotate(-35 -30 12)"/>
+            <g transform="translate(0,-8)">
+              <circle cx="0" cy="-16" r="12" fill="#F2C230"/><circle cx="15" cy="-5" r="12" fill="#F2C230"/><circle cx="9" cy="12" r="12" fill="#F2C230"/><circle cx="-9" cy="12" r="12" fill="#F2C230"/><circle cx="-15" cy="-5" r="12" fill="#F2C230"/>
+              <circle cx="0" cy="0" r="10" fill="#E8563F"/>
+            </g>
+          </g>
+          <!-- heart flower -->
+          <g transform="translate(215,265)">
+            <path d="M0 45 Q2 18 0 0" stroke="#2E9E6B" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M0 -2 C-16 -22 -44 -4 -22 14 L0 30 L22 14 C44 -4 16 -22 0 -2 Z" fill="#E8563F"/>
+          </g>
+        </g>
+        <!-- swing -->
+        <g class="float d1">
+          <line x1="285" y1="60" x2="265" y2="185" stroke="#2B2B33" stroke-width="4" stroke-linecap="round"/>
+          <line x1="345" y1="60" x2="330" y2="185" stroke="#2B2B33" stroke-width="4" stroke-linecap="round"/>
+          <rect x="252" y="182" width="92" height="12" rx="6" fill="#E8563F"/>
+          <!-- child -->
+          <circle cx="297" cy="132" r="22" fill="#F8B4A0"/>
+          <path d="M275 128 Q276 106 297 108 Q319 106 320 128 Q319 112 297 112 Q276 112 275 128Z" fill="#E8563F"/>
+          <circle cx="290" cy="132" r="2.6" fill="#2B2B33"/><circle cx="305" cy="132" r="2.6" fill="#2B2B33"/>
+          <path d="M291 141 Q297 146 304 141" stroke="#2B2B33" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+          <rect x="281" y="152" width="33" height="34" rx="10" fill="#F2C230"/>
+          <path d="M283 160 Q268 150 262 132" stroke="#F8B4A0" stroke-width="9" fill="none" stroke-linecap="round"/>
+          <path d="M312 160 Q327 150 333 132" stroke="#F8B4A0" stroke-width="9" fill="none" stroke-linecap="round"/>
+          <path d="M288 186 L282 210" stroke="#2273B8" stroke-width="10" stroke-linecap="round"/>
+          <path d="M307 186 L313 210" stroke="#2273B8" stroke-width="10" stroke-linecap="round"/>
+        </g>
+        <!-- speech bubbles -->
+        <g class="float d2">
+          <g transform="translate(95,110)">
+            <rect x="0" y="0" width="86" height="52" rx="16" fill="#2273B8"/>
+            <path d="M22 50 L18 66 L38 50Z" fill="#2273B8"/>
+            <circle cx="26" cy="26" r="5" fill="#fff"/><circle cx="43" cy="26" r="5" fill="#fff" opacity=".75"/><circle cx="60" cy="26" r="5" fill="#fff" opacity=".5"/>
+          </g>
+          <g transform="translate(196,66)">
+            <rect x="0" y="0" width="64" height="42" rx="14" fill="#2E9E6B"/>
+            <path d="M40 40 L48 54 L26 40Z" fill="#2E9E6B"/>
+            <text x="32" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="19" font-weight="bold">Aa</text>
+          </g>
+        </g>
+        <!-- puzzle + star -->
+        <circle cx="80" cy="300" r="9" fill="#F2C230"/>
+        <circle cx="352" cy="290" r="7" fill="#2E9E6B"/>
+        <path d="M330 330 l5 12 12 2 -9 9 2 13 -10 -6 -11 6 2 -13 -9 -9 12 -2z" fill="#F2C230"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip" aria-hidden="true">
+  <div class="strip-inner" id="strip">
+    <span>🌼 Speech-Language Therapy</span><span>🧩 Occupational Therapy</span><span>💛 Psychology &amp; Behavioural Support</span><span>🌱 Early Intervention</span><span>👨‍👩‍👧 Family-Centred Care</span><span>🎈 For Children & Adults</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-art reveal">
+      <div class="about-blob"></div>
+      <div class="about-blob b2"></div>
+      <div class="about-card">
+        <h3>Our Promise</h3>
+        <p style="color:var(--ink-soft)">A team of well-qualified, registered health professionals working together to help every individual communicate, participate and thrive — in a space designed to feel safe, playful and welcoming.</p>
+        <ul class="check-list" style="margin-bottom:0">
+          <li>Registered, experienced therapists</li>
+          <li>Evidence-based, goal-driven therapy</li>
+          <li>Care for children and adults</li>
+        </ul>
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Who We Are</span>
+      <h2 class="sec-title">Welcome to Iris Child Development Centre</h2>
+      <p>As healthcare professionals, we understand the importance of timely and effective therapy for children with developmental needs and for adults recovering from injuries or illnesses. Early identification and consistent, structured intervention can transform outcomes — and every family deserves access to that care.</p>
+      <p>That's why we founded Iris Child Development Centre in Chevarambalam, Kozhikode — a dedicated therapy clinic bringing speech-language therapy, occupational therapy and psychological services together under one roof. Our team of qualified professionals delivers high-quality, individualized therapy in a warm, child-friendly environment.</p>
+      <p>With our guidance and support, we aim to improve your quality of life and help you achieve your goals. Let's work together to build a brighter future for you and your loved ones.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap center">
+    <span class="eyebrow">What We Do</span>
+    <h2 class="sec-title">Services We Provide</h2>
+    <p class="sec-sub">Comprehensive assessment and therapy for children and adults, tailored to each person's unique needs and goals.</p>
+    <div class="svc-grid" style="text-align:left">
+      <div class="svc c-green reveal">
+        <div class="svc-icon">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#2E9E6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        </div>
+        <h3>Speech-Language Therapy</h3>
+        <p>Speech therapy helps people improve their communication skills — speech, language and swallowing abilities. It benefits individuals with a wide range of conditions, such as developmental delays, autism, stuttering, voice disorders and brain injuries. Therapy involves exercises, strategies and techniques to improve communication and promote functional independence, tailored to the unique needs of each person — from children to the elderly.</p>
+        <a class="svc-more" href="#conditions">See what we treat →</a>
+      </div>
+      <div class="svc c-blue reveal">
+        <div class="svc-icon">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#2273B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11H19V7a2 2 0 0 0-2-2h-4V3.5a2.5 2.5 0 0 0-5 0V5H4a2 2 0 0 0-2 2v3.8h1.5a2.7 2.7 0 0 1 0 5.4H2V20a2 2 0 0 0 2 2h3.8v-1.5a2.7 2.7 0 0 1 5.4 0V22H17a2 2 0 0 0 2-2v-4h1.5a2.5 2.5 0 0 0 0-5z"/></svg>
+        </div>
+        <h3>Occupational Therapy</h3>
+        <p>Occupational therapy works with people of all age groups and abilities to help them do everyday tasks they find meaningful — self-care like brushing, eating, bathing and dressing; work or school-related skills; social activities, hobbies and community participation. It begins with an evaluation of what matters to you, followed by a personalized intervention plan and outcome reviews, so you can participate in daily life as independently as possible.</p>
+        <a class="svc-more" href="#conditions">See what we treat →</a>
+      </div>
+      <div class="svc c-coral reveal">
+        <div class="svc-icon">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#E8563F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3>Psychology &amp; Behavioural Support</h3>
+        <p>Our psychology services support children and adults through developmental, behavioural and emotional challenges. This includes developmental and psychological assessments, behaviour therapy, counselling for children and parents, and social-skills training. We work closely with families to understand each individual's strengths and needs, and build practical strategies that carry over into home, school and everyday life.</p>
+        <a class="svc-more" href="#contact">Talk to us →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONDITIONS -->
+<section class="conditions" id="conditions">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Conditions</span>
+      <h2 class="sec-title">What We Help With</h2>
+      <p class="sec-sub">Tap a condition to learn how therapy can help.</p>
+    </div>
+
+    <div class="acc-group reveal">
+      <h3 class="group-title"><span class="pill" style="background:var(--green)"></span>Speech-Language Therapy</h3>
+      <div class="acc">
+        <button class="acc-head">Autism Spectrum Disorder (ASD)<span class="plus">+</span></button>
+        <div class="acc-body"><p>Autism Spectrum Disorder (ASD) is a neurodevelopmental disorder caused by differences in the brain. Children with ASD often have problems with social communication and interaction, and restricted or repetitive behaviors or interests. Speech therapy for ASD addresses language and communication challenges, helping improve verbal, nonverbal and social communication.</p></div>
+      </div>
+      <div class="acc">
+        <button class="acc-head">Language Disorder<span class="plus">+</span></button>
+        <div class="acc-body"><p>Language Disorder is an impairment in the processing of linguistic information that affects an individual's ability to receive and/or express language. It involves persistent difficulties in the comprehension or production of spoken, written, sign language or other forms of language. Therapy starts by identifying your child's areas of strength and weakness, then follows a tailored treatment plan to help your child master language skills and communicate more effectively.</p></div>
+      </div>
+      <div class="acc">
+        <button class="acc-head">Dysarthria<span class="plus">+</span></button>
+        <div class="acc-body"><p>Dysarthria is a motor speech disorder that results from loss of strength, slowness, or coordination of the muscles that control speech, causing difficulty understanding speech — from mild slurring to completely unintelligible speech. Therapy goals include adjusting speech rate, strengthening muscles, improving breath support and articulation, and helping family members communicate with you.</p></div>
+      </div>
+      <div class="acc">
+        <button class="acc-head">Aphasia<span class="plus">+</span></button>
+        <div class="acc-body"><p>Aphasia is a disorder that results from damage to areas of the brain responsible for language. It can occur suddenly following a stroke or head injury, or slowly as a result of a tumor or progressive neurological conditions. Speech therapists help with language therapy, teach non-verbal communication skills, and help family members adapt to new forms of communication.</p></div>
+      </div>
+    </div>
+
+    <div class="acc-group reveal">
+      <h3 class="group-title"><span class="pill" style="background:var(--blue)"></span>Occupational Therapy</h3>
+      <div class="acc">
+        <button class="acc-head">Autism<span class="plus">+</span></button>
+        <div class="acc-body"><p>Autism, or autism spectrum disorder (ASD), refers to a broad range of conditions characterized by challenges with social skills, repetitive behaviors, speech and nonverbal communication. For children with autism, occupational therapists often focus on fine motor skills, play skills, learning strategies, social skills and self-care. OT strategies can also help manage sensory issues.</p></div>
+      </div>
+      <div class="acc">
+        <button class="acc-head">Stroke<span class="plus">+</span></button>
+        <div class="acc-body"><p>Stroke is a medical condition in which there is damage to the brain caused by an interruption in its blood supply. After a stroke, occupational therapy can help you return to work, be independent at home, and enjoy leisure activities and hobbies. It also helps in learning strategies to manage the cognitive, perceptual and behavioral changes associated with stroke, and your therapist can fabricate splints and advise on equipment and modifications to keep you safe and independent.</p></div>
+      </div>
+      <div class="acc">
+        <button class="acc-head">Hand Injuries<span class="plus">+</span></button>
+        <div class="acc-body"><p>Hand injuries involve injuries to the bone or soft tissue below the wrist joint — skin, tendon, nerve, vessel, bone or a combination. Occupational therapy helps recovery after surgery, including scar management, reducing pain, regaining movement, strengthening hand function, and custom splinting to facilitate healing and prevent stiffness.</p></div>
+      </div>
+      <div class="acc">
+        <button class="acc-head">Traumatic Brain Injury (TBI)<span class="plus">+</span></button>
+        <div class="acc-body"><p>Traumatic brain injury happens when a sudden, external physical assault damages the brain, often from a severe sports injury or car accident. A TBI can affect memory, emotional regulation, movement and sensory processing. An occupational therapist creates a personalized rehabilitation regimen to help regain or compensate for these skills, with the primary goal of restoring functional, independent living.</p></div>
+      </div>
+    </div>
+
+    <div class="acc-group reveal" style="margin-bottom:0">
+      <h3 class="group-title"><span class="pill" style="background:var(--coral)"></span>Psychology &amp; Behavioural</h3>
+      <div class="acc">
+        <button class="acc-head">Behavioural Challenges<span class="plus">+</span></button>
+        <div class="acc-body"><p>Tantrums, aggression, attention difficulties and other challenging behaviours often have identifiable triggers and patterns. Through structured behaviour therapy, we help children build self-regulation and positive behaviours, while equipping parents with consistent, practical strategies for home and school.</p></div>
+      </div>
+      <div class="acc">
+        <button class="acc-head">Developmental &amp; Psychological Assessment<span class="plus">+</span></button>
+        <div class="acc-body"><p>Standardized assessments help understand a child's developmental level, cognitive abilities, attention and social-emotional functioning. A clear assessment guides diagnosis, therapy planning and school support, and gives families a roadmap for the way forward.</p></div>
+      </div>
+      <div class="acc">
+        <button class="acc-head">Counselling &amp; Parent Guidance<span class="plus">+</span></button>
+        <div class="acc-body"><p>We offer supportive counselling for children, adolescents, adults and parents — covering emotional difficulties, anxiety, school-related stress and parenting concerns. Family involvement is central to everything we do, so therapy gains carry over into daily life.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why" id="why">
+  <div class="wrap center">
+    <span class="eyebrow">Why Iris</span>
+    <h2 class="sec-title">Care That Puts Your Family First</h2>
+    <p class="sec-sub">Everything at Iris is designed around one idea — therapy works best when it's consistent, individualized and joyful.</p>
+    <div class="why-grid" style="text-align:left">
+      <div class="why-card reveal"><span class="num">01</span><h3>Qualified Team</h3><p>Registered speech-language pathologists, occupational therapists and psychologists working together on every case.</p></div>
+      <div class="why-card reveal"><span class="num">02</span><h3>All Under One Roof</h3><p>Speech, OT and psychology in a single centre — coordinated goals, shared progress notes, no running between clinics.</p></div>
+      <div class="why-card reveal"><span class="num">03</span><h3>Individualized Plans</h3><p>Every plan begins with a detailed assessment and is tailored to each person's strengths, needs and family priorities.</p></div>
+      <div class="why-card reveal"><span class="num">04</span><h3>Family-Centred</h3><p>Parents and caregivers are partners in therapy — with regular reviews, home programs and practical guidance.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="c-info reveal">
+      <span class="eyebrow">Get In Touch</span>
+      <h2 class="sec-title">Connect With Us</h2>
+      <p>Have questions or want to book an assessment? Call us, send an email, or drop a message — we'll get back to you soon.</p>
+      <div class="c-item">
+        <div class="ic" style="background:#E3F4EC"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2E9E6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div><h4>Phone</h4><a href="tel:+918891575227">88915 75227</a> · <a href="tel:+919961132071">99611 32071</a></div>
+      </div>
+      <div class="c-item">
+        <div class="ic" style="background:#E4EFF9"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2273B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
+        <div><h4>Email</h4><a href="mailto:inhomerehab01@gmail.com">inhomerehab01@gmail.com</a></div>
+      </div>
+      <div class="c-item">
+        <div class="ic" style="background:#FDE8E2"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E8563F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><h4>Visit Us</h4><span class="val">Iris Child Development Centre,<br>Iringadanpally, Chevarambalam,<br>Kozhikode, Kerala</span></div>
+      </div>
+      <div class="c-item">
+        <div class="ic" style="background:#FBF0D6"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C79A18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div><h4>Working Hours</h4><span class="val">Monday – Saturday · 9:00 AM – 6:00 PM</span></div>
+      </div>
+    </div>
+    <div class="form-card reveal">
+      <h3>Send a Message</h3>
+      <p>Fill this in and it will open your email app with the message ready to send.</p>
+      <form id="cform">
+        <div class="field"><label for="fname">Name</label><input id="fname" type="text" required placeholder="Your name"></div>
+        <div class="field"><label for="fphone">Phone No</label><input id="fphone" type="tel" required placeholder="Your phone number"></div>
+        <div class="field"><label for="fmsg">Message</label><textarea id="fmsg" rows="4" required placeholder="Tell us briefly about your concern…"></textarea></div>
+        <button type="submit" class="btn btn-coral">Submit</button>
+        <p class="form-note">Or WhatsApp us directly at <a href="https://wa.me/918891575227" style="font-weight:800;color:var(--green)">88915 75227</a></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <a href="#home" class="logo">
+          <span class="word"><span class="l1">I</span><span class="l2">R</span><span class="l3">I</span><span class="l4">S</span></span>
+          <span class="tag">Child Development Centre</span>
+        </a>
+        <p>A dedicated therapy clinic in Kozhikode offering speech-language therapy, occupational therapy and psychological services for children and adults.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#conditions">What We Treat</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+918891575227">88915 75227</a></li>
+          <li><a href="tel:+919961132071">99611 32071</a></li>
+          <li><a href="mailto:inhomerehab01@gmail.com">inhomerehab01@gmail.com</a></li>
+          <li>Iringadanpally, Chevarambalam, Kozhikode</li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">© 2026 Iris Child Development Centre · All rights reserved</div>
+  </div>
+</footer>
+
+<script>
+// mobile menu
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>menu.classList.toggle('open'));
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+
+// marquee duplicate
+const strip=document.getElementById('strip');
+strip.innerHTML+=strip.innerHTML;
+
+// accordions
+document.querySelectorAll('.acc-head').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const acc=btn.parentElement,body=acc.querySelector('.acc-body'),open=acc.classList.contains('open');
+    acc.parentElement.querySelectorAll('.acc.open').forEach(o=>{o.classList.remove('open');o.querySelector('.acc-body').style.maxHeight=null;});
+    if(!open){acc.classList.add('open');body.style.maxHeight=body.scrollHeight+'px';}
+  });
+});
+
+// reveal on scroll (with fallback)
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target);}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+}else{
+  document.querySelectorAll('.reveal').forEach(el=>el.classList.add('show'));
+}
+
+// contact form -> mailto
+document.getElementById('cform').addEventListener('submit',e=>{
+  e.preventDefault();
+  const n=document.getElementById('fname').value,p=document.getElementById('fphone').value,m=document.getElementById('fmsg').value;
+  location.href='mailto:inhomerehab01@gmail.com?subject='+encodeURIComponent('Website enquiry from '+n)+'&body='+encodeURIComponent('Name: '+n+'\nPhone: '+p+'\n\n'+m);
+});
+</script>
+</body>
+</html>
