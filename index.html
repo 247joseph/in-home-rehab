@@ -50,13 +50,9 @@ section{padding:84px 0}
 /* ---------- header ---------- */
 header{position:sticky;top:0;z-index:100;background:rgba(255,249,240,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(43,43,51,.07)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
-.logo{display:flex;flex-direction:column;line-height:1}
-.logo .word{font-family:var(--serif);font-weight:900;font-size:2rem;letter-spacing:.04em}
-.logo .word .l1{color:var(--yellow)}
-.logo .word .l2{color:var(--green)}
-.logo .word .l3{color:var(--blue)}
-.logo .word .l4{color:var(--coral)}
-.logo .tag{font-size:.55rem;font-weight:800;letter-spacing:.22em;color:var(--coral);text-transform:uppercase;margin-top:3px}
+.logo{display:flex;align-items:center;line-height:1}
+.logo-img{height:54px;width:auto;display:block}
+.logo-img-footer{height:64px;background:#fff;border-radius:12px;padding:8px 14px}
 nav ul{display:flex;gap:30px;list-style:none;align-items:center}
 nav a{font-weight:700;font-size:.95rem;color:var(--ink-soft);position:relative}
 nav a:hover{color:var(--coral)}
@@ -81,7 +77,7 @@ nav a:hover::after{width:100%}
 .hero p.lead{font-size:1.15rem;color:var(--ink-soft);max-width:520px;margin-bottom:34px}
 .hero-btns{display:flex;gap:16px;flex-wrap:wrap}
 .hero-art{position:relative;display:flex;justify-content:center}
-.hero-art svg{width:100%;max-width:430px;height:auto}
+.hero-logo{width:100%;max-width:430px;height:auto}
 .float{animation:float 5s ease-in-out infinite}
 .float.d1{animation-delay:1.2s}.float.d2{animation-delay:2.4s}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
@@ -122,6 +118,24 @@ nav a:hover::after{width:100%}
 .svc h3{font-size:1.35rem;margin-bottom:12px}
 .svc p{color:var(--ink-soft);font-size:.95rem;flex:1}
 .svc-more{margin-top:18px;font-weight:800;font-size:.9rem;color:var(--coral)}
+
+/* ---------- WhatsApp widget ---------- */
+.wa-widget{position:fixed;right:22px;bottom:22px;z-index:200;display:flex;flex-direction:column;align-items:flex-end;gap:14px}
+.wa-fab{width:60px;height:60px;border-radius:50%;background:#25D366;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(37,211,102,.45);transition:.25s}
+.wa-fab:hover{transform:scale(1.08)}
+.wa-panel{display:none;width:320px;max-width:calc(100vw - 44px);background:#fff;border-radius:18px;box-shadow:0 18px 50px rgba(43,43,51,.25);overflow:hidden}
+.wa-panel.open{display:block}
+.wa-head{background:#075E54;color:#fff;padding:14px 16px;display:flex;align-items:center;gap:12px}
+.wa-head .wa-avatar{width:40px;height:40px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+.wa-head strong{display:block;font-size:.95rem;line-height:1.2}
+.wa-head span{font-size:.72rem;opacity:.85}
+.wa-close{margin-left:auto;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;line-height:1}
+.wa-body{padding:16px;background:#ECE5DD}
+.wa-bubble{background:#fff;border-radius:0 14px 14px 14px;padding:12px 14px;font-size:.9rem;margin-bottom:12px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+.wa-body textarea{width:100%;border:none;border-radius:12px;padding:12px;font-family:var(--sans);font-size:.95rem;resize:none;margin-bottom:10px}
+.wa-body textarea:focus{outline:2px solid #25D366}
+.wa-send{width:100%;background:#25D366;color:#fff;box-shadow:none;padding:12px}
+.wa-send:hover{background:#1EBE5A}
 
 /* ---------- conditions accordions ---------- */
 .conditions .acc-group{max-width:840px;margin:0 auto 46px}
@@ -185,7 +199,7 @@ footer a:hover{color:var(--yellow)}
 @media(max-width:920px){
   .hero .wrap,.about .wrap,.contact .wrap{grid-template-columns:1fr}
   .hero-art{order:-1}
-  .hero-art svg{max-width:300px}
+  .hero-logo{max-width:300px}
   .svc-grid{grid-template-columns:1fr}
   .why-grid{grid-template-columns:repeat(2,1fr)}
   .f-grid{grid-template-columns:1fr 1fr}
@@ -205,8 +219,7 @@ footer a:hover{color:var(--yellow)}
 <header>
   <div class="wrap nav">
     <a href="#home" class="logo" aria-label="Iris Child Development Centre">
-      <span class="word"><span class="l1">I</span><span class="l2">R</span><span class="l3">I</span><span class="l4">S</span></span>
-      <span class="tag">Child Development Centre</span>
+      <img src="logo.png" alt="IRIS Child Development Centre" class="logo-img">
     </a>
     <nav>
       <ul id="menu">
@@ -227,7 +240,7 @@ footer a:hover{color:var(--yellow)}
   <div class="wrap">
     <div>
       <span class="eyebrow">Chevarambalam · Kozhikode</span>
-      <h1>Helping every child <span class="hl">bloom</span>, one milestone at a time.</h1>
+      <h1>Where Every <span class="hl">Child</span> Matters</h1>
       <p class="lead">Iris Child Development Centre offers speech-language therapy, occupational therapy and psychological services for children and adults, delivered with warmth, play and evidence-based care.</p>
       <div class="hero-btns">
         <a href="#contact" class="btn btn-coral">Book an Appointment</a>
@@ -236,64 +249,11 @@ footer a:hover{color:var(--yellow)}
       <div class="hero-badges">
         <div class="badge"><span class="dot" style="background:var(--green)"></span>Qualified therapists</div>
         <div class="badge"><span class="dot" style="background:var(--yellow)"></span>Child-friendly clinic</div>
-        <div class="badge"><span class="dot" style="background:var(--coral)"></span>Individualized plans</div>
+        <div class="badge"><span class="dot" style="background:var(--coral)"></span>Individualized therapy plans</div>
       </div>
     </div>
-    <div class="hero-art" aria-hidden="true">
-      <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="210" cy="210" r="190" fill="#FDF3E3"/>
-        <circle cx="210" cy="210" r="190" fill="none" stroke="#F2C230" stroke-width="3" stroke-dasharray="4 14" stroke-linecap="round"/>
-        <!-- flower -->
-        <g class="float">
-          <g transform="translate(150,250)">
-            <path d="M0 60 Q-4 20 0 0" stroke="#2E9E6B" stroke-width="6" fill="none" stroke-linecap="round"/>
-            <path d="M0 40 Q-22 34 -28 16" stroke="#2E9E6B" stroke-width="5" fill="none" stroke-linecap="round"/>
-            <ellipse cx="-30" cy="12" rx="10" ry="6" fill="#2E9E6B" transform="rotate(-35 -30 12)"/>
-            <g transform="translate(0,-8)">
-              <circle cx="0" cy="-16" r="12" fill="#F2C230"/><circle cx="15" cy="-5" r="12" fill="#F2C230"/><circle cx="9" cy="12" r="12" fill="#F2C230"/><circle cx="-9" cy="12" r="12" fill="#F2C230"/><circle cx="-15" cy="-5" r="12" fill="#F2C230"/>
-              <circle cx="0" cy="0" r="10" fill="#E8563F"/>
-            </g>
-          </g>
-          <!-- heart flower -->
-          <g transform="translate(215,265)">
-            <path d="M0 45 Q2 18 0 0" stroke="#2E9E6B" stroke-width="6" fill="none" stroke-linecap="round"/>
-            <path d="M0 -2 C-16 -22 -44 -4 -22 14 L0 30 L22 14 C44 -4 16 -22 0 -2 Z" fill="#E8563F"/>
-          </g>
-        </g>
-        <!-- swing -->
-        <g class="float d1">
-          <line x1="285" y1="60" x2="265" y2="185" stroke="#2B2B33" stroke-width="4" stroke-linecap="round"/>
-          <line x1="345" y1="60" x2="330" y2="185" stroke="#2B2B33" stroke-width="4" stroke-linecap="round"/>
-          <rect x="252" y="182" width="92" height="12" rx="6" fill="#E8563F"/>
-          <!-- child -->
-          <circle cx="297" cy="132" r="22" fill="#F8B4A0"/>
-          <path d="M275 128 Q276 106 297 108 Q319 106 320 128 Q319 112 297 112 Q276 112 275 128Z" fill="#E8563F"/>
-          <circle cx="290" cy="132" r="2.6" fill="#2B2B33"/><circle cx="305" cy="132" r="2.6" fill="#2B2B33"/>
-          <path d="M291 141 Q297 146 304 141" stroke="#2B2B33" stroke-width="2.4" fill="none" stroke-linecap="round"/>
-          <rect x="281" y="152" width="33" height="34" rx="10" fill="#F2C230"/>
-          <path d="M283 160 Q268 150 262 132" stroke="#F8B4A0" stroke-width="9" fill="none" stroke-linecap="round"/>
-          <path d="M312 160 Q327 150 333 132" stroke="#F8B4A0" stroke-width="9" fill="none" stroke-linecap="round"/>
-          <path d="M288 186 L282 210" stroke="#2273B8" stroke-width="10" stroke-linecap="round"/>
-          <path d="M307 186 L313 210" stroke="#2273B8" stroke-width="10" stroke-linecap="round"/>
-        </g>
-        <!-- speech bubbles -->
-        <g class="float d2">
-          <g transform="translate(95,110)">
-            <rect x="0" y="0" width="86" height="52" rx="16" fill="#2273B8"/>
-            <path d="M22 50 L18 66 L38 50Z" fill="#2273B8"/>
-            <circle cx="26" cy="26" r="5" fill="#fff"/><circle cx="43" cy="26" r="5" fill="#fff" opacity=".75"/><circle cx="60" cy="26" r="5" fill="#fff" opacity=".5"/>
-          </g>
-          <g transform="translate(196,66)">
-            <rect x="0" y="0" width="64" height="42" rx="14" fill="#2E9E6B"/>
-            <path d="M40 40 L48 54 L26 40Z" fill="#2E9E6B"/>
-            <text x="32" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="19" font-weight="bold">Aa</text>
-          </g>
-        </g>
-        <!-- puzzle + star -->
-        <circle cx="80" cy="300" r="9" fill="#F2C230"/>
-        <circle cx="352" cy="290" r="7" fill="#2E9E6B"/>
-        <path d="M330 330 l5 12 12 2 -9 9 2 13 -10 -6 -11 6 2 -13 -9 -9 12 -2z" fill="#F2C230"/>
-      </svg>
+    <div class="hero-art">
+      <img src="logo.png" alt="IRIS Child Development Centre logo" class="hero-logo float">
     </div>
   </div>
 </section>
@@ -334,7 +294,6 @@ footer a:hover{color:var(--yellow)}
 <!-- SERVICES -->
 <section class="services" id="services">
   <div class="wrap center">
-    <span class="eyebrow">What We Do</span>
     <h2 class="sec-title">Services We Provide</h2>
     <p class="sec-sub">Comprehensive assessment and therapy for children and adults, tailored to each person's unique needs and goals.</p>
     <div class="svc-grid" style="text-align:left">
@@ -344,7 +303,6 @@ footer a:hover{color:var(--yellow)}
         </div>
         <h3>Speech-Language Therapy</h3>
         <p>Speech therapy helps people improve their communication skills: speech, language and swallowing abilities. It benefits individuals with a wide range of conditions, such as developmental delays, autism, stuttering, voice disorders and brain injuries. Therapy involves exercises, strategies and techniques to improve communication and promote functional independence, tailored to the unique needs of each person, from children to the elderly.</p>
-        <a class="svc-more" href="#conditions">See what we treat →</a>
       </div>
       <div class="svc c-blue reveal">
         <div class="svc-icon">
@@ -352,7 +310,6 @@ footer a:hover{color:var(--yellow)}
         </div>
         <h3>Occupational Therapy</h3>
         <p>Occupational therapy works with people of all age groups and abilities to help them do everyday tasks they find meaningful: self-care like brushing, eating, bathing and dressing; work or school-related skills; social activities, hobbies and community participation. It begins with an evaluation of what matters to you, followed by a personalized intervention plan and outcome reviews, so you can participate in daily life as independently as possible.</p>
-        <a class="svc-more" href="#conditions">See what we treat →</a>
       </div>
       <div class="svc c-coral reveal">
         <div class="svc-icon">
@@ -360,7 +317,6 @@ footer a:hover{color:var(--yellow)}
         </div>
         <h3>Psychology &amp; Behavioural Support</h3>
         <p>Our psychology services support children and adults through developmental, behavioural and emotional challenges. This includes developmental and psychological assessments, behaviour therapy, counselling for children and parents, and social-skills training. We work closely with families to understand each individual's strengths and needs, and build practical strategies that carry over into home, school and everyday life.</p>
-        <a class="svc-more" href="#contact">Talk to us →</a>
       </div>
     </div>
   </div>
@@ -370,49 +326,31 @@ footer a:hover{color:var(--yellow)}
 <section class="conditions" id="conditions">
   <div class="wrap">
     <div class="center">
-      <span class="eyebrow">Conditions</span>
       <h2 class="sec-title">What We Help With</h2>
-      <p class="sec-sub">Tap a condition to learn how therapy can help.</p>
     </div>
 
     <div class="acc-group reveal">
       <h3 class="group-title"><span class="pill" style="background:var(--green)"></span>Speech-Language Therapy</h3>
       <div class="acc">
-        <button class="acc-head">Autism Spectrum Disorder (ASD)<span class="plus">+</span></button>
-        <div class="acc-body"><p>Autism Spectrum Disorder (ASD) is a neurodevelopmental disorder caused by differences in the brain. Children with ASD often have problems with social communication and interaction, and restricted or repetitive behaviors or interests. Speech therapy for ASD addresses language and communication challenges, helping improve verbal, nonverbal and social communication.</p></div>
+        <button class="acc-head">Child Language Disorders<span class="plus">+</span></button>
+        <div class="acc-body"><p>Child language disorders affect how a child understands language and expresses themselves — vocabulary, sentence building, following instructions and holding conversations. They can appear as delayed first words, difficulty combining words, or trouble understanding what is said. Therapy begins with a detailed assessment of your child's strengths and needs, followed by a play-based, individualized plan that builds comprehension and expression step by step, with parents involved at every stage.</p></div>
       </div>
       <div class="acc">
-        <button class="acc-head">Language Disorder<span class="plus">+</span></button>
-        <div class="acc-body"><p>Language Disorder is an impairment in the processing of linguistic information that affects an individual's ability to receive and/or express language. It involves persistent difficulties in the comprehension or production of spoken, written, sign language or other forms of language. Therapy starts by identifying your child's areas of strength and weakness, then follows a tailored treatment plan to help your child master language skills and communicate more effectively.</p></div>
+        <button class="acc-head">Stuttering<span class="plus">+</span></button>
+        <div class="acc-body"><p>Stuttering is a fluency disorder in which the flow of speech is interrupted by repetitions of sounds or words, prolongations, or blocks where no sound comes out. It often begins in early childhood and can affect confidence in speaking situations. Therapy teaches fluency-shaping and stuttering-modification techniques, builds speaking confidence, and guides parents on how to support smooth, relaxed communication at home and school.</p></div>
       </div>
       <div class="acc">
-        <button class="acc-head">Dysarthria<span class="plus">+</span></button>
-        <div class="acc-body"><p>Dysarthria is a motor speech disorder that results from loss of strength, slowness, or coordination of the muscles that control speech, causing difficulty understanding speech, ranging from mild slurring to completely unintelligible speech. Therapy goals include adjusting speech rate, strengthening muscles, improving breath support and articulation, and helping family members communicate with you.</p></div>
+        <button class="acc-head">Articulation<span class="plus">+</span></button>
+        <div class="acc-body"><p>Articulation difficulties make speech sounds unclear — sounds may be substituted, left out or distorted (for example "wabbit" for "rabbit"), making the child hard to understand. Therapy identifies the specific sound errors, then works through structured, engaging practice from single sounds up to words, sentences and everyday conversation, so speech becomes clearer and easier for everyone to understand.</p></div>
       </div>
       <div class="acc">
-        <button class="acc-head">Aphasia<span class="plus">+</span></button>
-        <div class="acc-body"><p>Aphasia is a disorder that results from damage to areas of the brain responsible for language. It can occur suddenly following a stroke or head injury, or slowly as a result of a tumor or progressive neurological conditions. Speech therapists help with language therapy, teach non-verbal communication skills, and help family members adapt to new forms of communication.</p></div>
+        <button class="acc-head">Adult Language Disorders<span class="plus">+</span></button>
+        <div class="acc-body"><p>Adult language disorders such as aphasia and dysarthria usually follow a stroke, head injury or neurological condition. Aphasia affects the ability to understand and express language — speaking, comprehension, reading and writing — while dysarthria is a motor speech disorder in which weak or poorly coordinated speech muscles cause slurred or unclear speech. Therapy focuses on regaining language and speech clarity, teaching alternative communication strategies, and helping family members communicate effectively.</p></div>
       </div>
     </div>
 
     <div class="acc-group reveal">
       <h3 class="group-title"><span class="pill" style="background:var(--blue)"></span>Occupational Therapy</h3>
-      <div class="acc">
-        <button class="acc-head">Autism<span class="plus">+</span></button>
-        <div class="acc-body"><p>Autism, or autism spectrum disorder (ASD), refers to a broad range of conditions characterized by challenges with social skills, repetitive behaviors, speech and nonverbal communication. For children with autism, occupational therapists often focus on fine motor skills, play skills, learning strategies, social skills and self-care. OT strategies can also help manage sensory issues.</p></div>
-      </div>
-      <div class="acc">
-        <button class="acc-head">Stroke<span class="plus">+</span></button>
-        <div class="acc-body"><p>Stroke is a medical condition in which there is damage to the brain caused by an interruption in its blood supply. After a stroke, occupational therapy can help you return to work, be independent at home, and enjoy leisure activities and hobbies. It also helps in learning strategies to manage the cognitive, perceptual and behavioral changes associated with stroke, and your therapist can fabricate splints and advise on equipment and modifications to keep you safe and independent.</p></div>
-      </div>
-      <div class="acc">
-        <button class="acc-head">Hand Injuries<span class="plus">+</span></button>
-        <div class="acc-body"><p>Hand injuries involve injuries to the bone or soft tissue below the wrist joint: skin, tendon, nerve, vessel, bone or a combination. Occupational therapy helps recovery after surgery, including scar management, reducing pain, regaining movement, strengthening hand function, and custom splinting to facilitate healing and prevent stiffness.</p></div>
-      </div>
-      <div class="acc">
-        <button class="acc-head">Traumatic Brain Injury (TBI)<span class="plus">+</span></button>
-        <div class="acc-body"><p>Traumatic brain injury happens when a sudden, external physical assault damages the brain, often from a severe sports injury or car accident. A TBI can affect memory, emotional regulation, movement and sensory processing. An occupational therapist creates a personalized rehabilitation regimen to help regain or compensate for these skills, with the primary goal of restoring functional, independent living.</p></div>
-      </div>
     </div>
 
     <div class="acc-group reveal" style="margin-bottom:0">
@@ -457,11 +395,11 @@ footer a:hover{color:var(--yellow)}
       <p>Have questions or want to book an assessment? Call us, send an email, or drop a message and we'll get back to you soon.</p>
       <div class="c-item">
         <div class="ic" style="background:#E3F4EC"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2E9E6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-        <div><h4>Phone</h4><a href="tel:+918891575227">88915 75227</a> · <a href="tel:+919961132071">99611 32071</a></div>
+        <div><h4>Phone</h4><a href="tel:+918891575227">88915 75227</a></div>
       </div>
       <div class="c-item">
         <div class="ic" style="background:#E4EFF9"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2273B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
-        <div><h4>Email</h4><a href="mailto:inhomerehab01@gmail.com">inhomerehab01@gmail.com</a></div>
+        <div><h4>Email</h4><a href="mailto:iriscdc1@gmail.com">iriscdc1@gmail.com</a></div>
       </div>
       <div class="c-item">
         <div class="ic" style="background:#FDE8E2"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E8563F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
@@ -469,7 +407,7 @@ footer a:hover{color:var(--yellow)}
       </div>
       <div class="c-item">
         <div class="ic" style="background:#FBF0D6"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C79A18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-        <div><h4>Working Hours</h4><span class="val">Monday – Saturday · 9:00 AM – 6:00 PM</span></div>
+        <div><h4>Working Hours</h4><span class="val">Monday – Saturday · 10:00 AM – 8:00 PM</span></div>
       </div>
     </div>
     <div class="form-card reveal">
@@ -491,8 +429,7 @@ footer a:hover{color:var(--yellow)}
     <div class="f-grid">
       <div>
         <a href="#home" class="logo">
-          <span class="word"><span class="l1">I</span><span class="l2">R</span><span class="l3">I</span><span class="l4">S</span></span>
-          <span class="tag">Child Development Centre</span>
+          <img src="logo.png" alt="IRIS Child Development Centre" class="logo-img logo-img-footer">
         </a>
         <p>A dedicated therapy clinic in Kozhikode offering speech-language therapy, occupational therapy and psychological services for children and adults.</p>
       </div>
@@ -509,8 +446,7 @@ footer a:hover{color:var(--yellow)}
         <h4>Contact</h4>
         <ul>
           <li><a href="tel:+918891575227">88915 75227</a></li>
-          <li><a href="tel:+919961132071">99611 32071</a></li>
-          <li><a href="mailto:inhomerehab01@gmail.com">inhomerehab01@gmail.com</a></li>
+          <li><a href="mailto:iriscdc1@gmail.com">iriscdc1@gmail.com</a></li>
           <li>Iringadanpally, Chevarambalam, Kozhikode</li>
         </ul>
       </div>
@@ -518,6 +454,28 @@ footer a:hover{color:var(--yellow)}
     <div class="f-bottom">© 2026 Iris Child Development Centre · All rights reserved</div>
   </div>
 </footer>
+
+<!-- WhatsApp chat widget -->
+<div class="wa-widget">
+  <div class="wa-panel" id="waPanel" role="dialog" aria-label="Chat with us on WhatsApp">
+    <div class="wa-head">
+      <div class="wa-avatar">💬</div>
+      <div>
+        <strong>Iris Child Development Centre</strong>
+        <span>Typically replies during working hours</span>
+      </div>
+      <button class="wa-close" id="waClose" aria-label="Close chat">×</button>
+    </div>
+    <div class="wa-body">
+      <div class="wa-bubble">Hi! 👋 How can we help you? Type your message below and it will reach us directly on WhatsApp.</div>
+      <textarea id="waMsg" rows="3" placeholder="Type your message…"></textarea>
+      <button class="btn wa-send" id="waSend">Send on WhatsApp</button>
+    </div>
+  </div>
+  <button class="wa-fab" id="waFab" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" width="30" height="30" fill="#fff"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 4 1.6 6.2 1.6h.5c6.6 0 12-5.3 12-11.9C30 8.3 24.6 3 16 3h0zm7 16.9c-.3.8-1.5 1.5-2.4 1.7-.6.1-1.4.2-4.1-.9-3.5-1.4-5.7-4.9-5.9-5.2-.2-.2-1.4-1.9-1.4-3.6 0-1.7.9-2.5 1.2-2.9.3-.3.7-.4 1-.4h.7c.2 0 .5-.1.8.6.3.8 1.1 2.6 1.2 2.8.1.2.2.4 0 .7-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.3 2.8 1.7 3.2 1.9.4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.4 1.1 2.8 1.3.4.2.7.3.8.5.1.2.1 1-.2 1.6z"/></svg>
+  </button>
+</div>
 
 <script>
 // mobile menu
@@ -546,11 +504,20 @@ if('IntersectionObserver' in window){
   document.querySelectorAll('.reveal').forEach(el=>el.classList.add('show'));
 }
 
+// WhatsApp widget
+const waFab=document.getElementById('waFab'),waPanel=document.getElementById('waPanel'),waClose=document.getElementById('waClose'),waSend=document.getElementById('waSend'),waMsg=document.getElementById('waMsg');
+waFab.addEventListener('click',()=>waPanel.classList.toggle('open'));
+waClose.addEventListener('click',()=>waPanel.classList.remove('open'));
+waSend.addEventListener('click',()=>{
+  const t=waMsg.value.trim();
+  window.open('https://wa.me/918891575227'+(t?'?text='+encodeURIComponent(t):''),'_blank');
+});
+
 // contact form -> mailto
 document.getElementById('cform').addEventListener('submit',e=>{
   e.preventDefault();
   const n=document.getElementById('fname').value,p=document.getElementById('fphone').value,m=document.getElementById('fmsg').value;
-  location.href='mailto:inhomerehab01@gmail.com?subject='+encodeURIComponent('Website enquiry from '+n)+'&body='+encodeURIComponent('Name: '+n+'\nPhone: '+p+'\n\n'+m);
+  location.href='mailto:iriscdc1@gmail.com?subject='+encodeURIComponent('Website enquiry from '+n)+'&body='+encodeURIComponent('Name: '+n+'\nPhone: '+p+'\n\n'+m);
 });
 </script>
 </body>
